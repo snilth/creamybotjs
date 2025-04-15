@@ -8,10 +8,10 @@ export function joinVC(message) {
     }
 
     joinVoiceChannel({
-        chId: vc.id,
-        guildId: vc.guild.id,
-        adapterCreator: vc.guild.voiceAdapterCreator,
+        channelId: vc.id,
+        guildId: message.guild.id,
+        adapterCreator: message.guild.voiceAdapterCreator,
     });
 
-    message.reply(`creamy joined ${vc.name}`);
+    message.reply(`creamy has joined ${vc.name}`);
 }

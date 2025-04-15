@@ -1,2 +1,4 @@
 node_modules/
 .env
+userNicknames.json
+tts.mp3
