@@ -2,7 +2,7 @@ import { Client, GatewayIntentBits } from 'discord.js';
 import 'dotenv/config';
 
 import { joinVC } from './commands/join.js';
-import { sayInVC } from './commands/say.js';
+import { sayInVC } from './events/say.js';
 import { getVoiceConnection } from '@discordjs/voice';
 
 
@@ -25,7 +25,7 @@ client.once('ready', () => {
 const sayChId = process.env.SAY_CHANNEL_ID;
 client.on('messageCreate', message => {
     if (message.content === '!ping') {
-        message.reply('🏓 Pong!');
+        message.reply('🏓 Pong!');s
     }
 
     if (message.content === '!join') {
