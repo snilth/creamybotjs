@@ -1,8 +1,10 @@
 import { createAudioPlayer, createAudioResource, getVoiceConnection, AudioPlayerStatus } from '@discordjs/voice';
 import gTTS from 'gtts';
 import fs from 'fs';
+import path from 'path';
 
-const userNicknames = JSON.parse(fs.readFileSync('./userNicknames.json', 'utf8'));
+const nickPath = path.resolve('./data/userNicknames.json');
+const userNicknames = JSON.parse(fs.readFileSync(nickPath, 'utf8'));
 
 export async function sayInVC(message, text) {
 
